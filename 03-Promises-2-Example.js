@@ -23,9 +23,9 @@ getData(42).then(
     (err) => console.log(err)
 )
 
-Promise.race([
+Promise.all([
     getData(42, "server1"),
     getData(42, "server2"),
     getData(42, "server3")
-]).then((x) => {.x[0]..})
+]).then(([ x1, x2, x2 ]) => { ... })
 
