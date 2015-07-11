@@ -1,0 +1,7 @@
+
+subscribe("foo", (val) => {
+    ...
+})
+
+publish("foo", val)
+

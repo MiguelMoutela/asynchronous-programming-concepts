@@ -1,0 +1,7 @@
+
+           manager   memory      switching     costs           use
+           ========= =========== ============= =============== =================
+process    os        dedicated   preemtive     syscall + MMU   cluster
+thread     os        shared      preemtive     syscall         webworker-threads
+context    v8        shared      cooperative   -               implicit
+

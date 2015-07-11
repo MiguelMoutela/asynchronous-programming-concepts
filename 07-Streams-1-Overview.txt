@@ -1,0 +1,9 @@
+
+Four Fundamental Effects
+========================
+
+       One        Many
+       ========== =============
+Sync:  T          Iterable[T]     (pull mode)
+Async: Promise[T] Observable[T]   (push mode)
+

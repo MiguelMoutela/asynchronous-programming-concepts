@@ -1,0 +1,25 @@
+
+States
+======
+
+           +---> Resolved/Fulfilled
+           |
+Pending ---+
+           |
+           +---> Rejected
+          
+API
+===
+
+CREATE:
+p = new Promise((resolve, reject) => { ... })
+Promise.resolve(value)
+Promise.reject(err)
+
+USE:
+p.then(onSuccess[, onError]): Promise
+
+COMBINE:
+Promise.all ([ p1, p2, ... ]): Promise
+Promise.race([ p1, p2, ... ]): Promise
+
