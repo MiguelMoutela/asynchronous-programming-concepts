@@ -4,9 +4,9 @@
 Interesting Aspects
 ===================
 
-1. ".then" Methode liefert neuen Promise!
-2. Dieser wird in onSuccess und(!) onError durch "return value" mit "value" resolved.
-3. Dieser wird in onSuccess und(!) onError durch "throw value"  mit "value" rejected.
+1. ".then" method returns a new(!) Promise.
+2. This promise in onSuccess and(!) onError can be resolved by any "return value".
+3. This promise in onSuccess and(!) onError can be rejected by any "throw value".
 
 */
 
