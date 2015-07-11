@@ -2,9 +2,8 @@
 Asynchronous Programming Concepts
 =================================
 
-This is the underlying material of a lecture on Asynchronous Programming
-Concepts, held by Ralf S. Engelschall on 2015-07-11 at msg Applied
-Technology Research.
+This is the underlying material of an ad-hoc lecture on Asynchronous
+Programming Concepts.
 
 Table of Contents
 -----------------

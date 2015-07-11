@@ -15,8 +15,6 @@ handler: function (request, onSuccess, onError) {
         dm.ProductQuantity.findAll({
             where: { productId: product.productId }
         }, (productQuantities) => {
-
-            /*  load aggregated information  */
             product.getProductGroups((productGroups) => {
                 product.getProductParams((productParams) => {
                     product.getProductVats((productVats) => {

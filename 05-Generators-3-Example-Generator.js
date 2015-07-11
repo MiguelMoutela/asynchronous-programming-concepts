@@ -12,12 +12,16 @@ handler: co(function * (request) {
         throw Boom.create(404, `product not found: "${id}"`)
 
     /*  load related information  */
-    let productQuantities = yield dm.ProductQuantity.findAll({
-        where: { productId: product.productId }
-    })
-
-    /*  load aggregated information  */
-    let productXXX = yield Promise.all([
+    let [
+        productQuantities,
+        productGroups,
+        productParams,
+        productVats,
+        productRedeems
+    ] = yield Promise.all([
+        dm.ProductQuantity.findAll({
+            where: { productId: product.productId }
+        })
         product.getProductGroups()
         product.getProductParams()
         product.getProductVats()

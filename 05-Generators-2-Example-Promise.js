@@ -13,24 +13,25 @@ handler: function (request) {
                 throw Boom.create(404, `product not found: "${id}"`)
 
             /*  load related information  */
-            dm.ProductQuantity.findAll({
-                where: { productId: product.productId }
-            }).then((productQuantities) => {
+            Promise.all([
+                dm.ProductQuantity.findAll({
+                    where: { productId: product.productId }
+                }),
+                product.getProductGroups(),
+                product.getProductParams(),
+                product.getProductVats(),
+                product.getProductRedeems()
+            ]).then(([
+                productQuantities,
+                productGroups,
+                productParams,
+                productVats,
+                productRedeems
+            ]) => {
 
-                /*  load aggregated information  */
-                Promise.all([
-                    product.getProductGroups(),
-                    product.getProductParams(),
-                    product.getProductVats(),
-                    product.getProductRedeems()
-                ]).then(([
-                    productGroups, productParams,
-                    productVats, productRedeems ]) => {
-
-                    /*  produce response  */
-                    let response = { ... }
-                    resolve(response)
-                })
+                /*  produce response  */
+                let response = { ... }
+                resolve(response)
             })
         })
     })

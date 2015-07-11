@@ -7,7 +7,7 @@ States
 Pending ---+
            |
            +---> Rejected
-          
+
 API
 ===
 
