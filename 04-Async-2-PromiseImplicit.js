@@ -13,6 +13,6 @@ const getData = thenify((id, cb) => {
 getData( 0, (err, x) => console.log(err !== null ? err : x))
 getData(42, (err, x) => console.log(err !== null ? err : x))
 
-getData( 0).then((x) => console.log(x), (err) => console.log(err))
-getData(42).then((x) => console.log(x), (err) => console.log(err))
+getData( 0).then((x) => console.log(x)).catch((err) => console.log(err))
+getData(42).then((x) => console.log(x)).catch((err) => console.log(err))
 

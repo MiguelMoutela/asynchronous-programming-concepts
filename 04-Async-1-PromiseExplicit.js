@@ -10,6 +10,6 @@ const getData = (id) => {
     })
 }
 
-getData(0) .then((x) => console.log(x), (err) => console.log(err))
-getData(42).then((x) => console.log(x), (err) => console.log(err))
+getData(0) .then((x) => console.log(x)).catch((err) => console.log(err))
+getData(42).then((x) => console.log(x)).catch((err) => console.log(err))
 

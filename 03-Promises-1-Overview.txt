@@ -18,6 +18,7 @@ Promise.reject(err)
 
 USE:
 p.then(onSuccess[, onError]): Promise
+p.catch(onError): Promise
 
 COMBINE:
 Promise.all ([ p1, p2, ... ]): Promise

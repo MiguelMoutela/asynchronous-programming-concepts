@@ -23,7 +23,7 @@ var testdrive = (id, action1, action2) => {
             throw `${err}:EX`
     }).then((val) => {
         console.log(action1, action2, "VAL", val)
-    }, (err) => {
+    }).catch((err) => {
         console.log(action1, action2, "ERR", err)
     })
 }
